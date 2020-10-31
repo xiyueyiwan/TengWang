@@ -17,3 +17,5 @@ Some Comment
 
 
 3. 使得网页不可编辑，修改 script.js 文件中的 jQuery。将('contenteditable', 'true')中的true全部改为false。
+
+4. 去掉每个模块添加删除的功能：将 script.js 文件中有 item-remove unit-remove等注释掉即可。

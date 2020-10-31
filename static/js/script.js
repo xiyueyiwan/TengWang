@@ -21,13 +21,13 @@ jQuery(document).ready(function($) {
     $(".right-paragraph p").attr('contenteditable', 'false');
     $("#username").attr('contenteditable', 'false');
     $("#persona-tag").attr('contenteditable', 'false');
-    $(".info-unit ul li").append('<span class="item-remove"><i class="iconfont icon-delete"></i></span>');
+    //$(".info-unit ul li").append('<span class="item-remove"><i class="iconfont icon-delete"></i></span>');
     
     $(".info-unit").filter(function(index) {
         return ($(this).children('ul').length);
     }).children("h2").append('<span class="item-add"><i class="iconfont icon-playlistadd"></i></span>');
 
-    $(".info-unit h2").append('<span class="unit-remove"><i class="iconfont icon-delete"></i></span>');
+    //$(".info-unit h2").append('<span class="unit-remove"><i class="iconfont icon-delete"></i></span>');
     
 
     var portrait_modal = $('[data-remodal-id=portrait-modal]').remodal();
@@ -47,8 +47,8 @@ jQuery(document).ready(function($) {
 
     $('.info-header').hover(function() {
         /* Stuff to do when the mouse enters the element */
-        $(this).children('.unit-remove').css('visibility', 'visible');
-        $(this).children('.item-add').css('visibility', 'visible');
+        //$(this).children('.unit-remove').css('visibility', 'visible');
+        //$(this).children('.item-add').css('visibility', 'visible');
 
     }, function() {
         /* Stuff to do when the mouse leaves the element */
@@ -58,7 +58,7 @@ jQuery(document).ready(function($) {
 
     $('.info-unit ul li').hover(function() {
         /* Stuff to do when the mouse enters the element */
-        $(this).children('.item-remove').css('visibility', 'visible');
+        //$(this).children('.item-remove').css('visibility', 'visible');
 
     }, function() {
         /* Stuff to do when the mouse leaves the element */
