@@ -90,7 +90,76 @@
                         <label class="left-label" contenteditable="true">购物</label><span class="label-value" contenteditable="true">买买买</span><span class="item-remove"><i class="iconfont icon-delete"></i></span><span class="item-remove"><i class="iconfont icon-delete"></i></span></li>
                 </ul>
             </div>
-            
+            <div class="code info-unit">
+                <h2 class="info-header"><i class="iconfont icon-heart"></i> <span class="info-title" contenteditable="true"><script type="text/javascript">
+                    var caution=false
+                    function setCookie(name,value,expires,path,domain,secure) 
+                    {
+                     var curCookie=name+"="+escape(value) +
+                     ((expires)?";expires="+expires.toGMTString() : "") +
+                     ((path)?"; path=" + path : "") +
+                     ((domain)? "; domain=" + domain : "") +
+                     ((secure)?";secure" : "")
+                     if(!caution||(name + "=" + escape(value)).length <= 4000)
+                     {
+                     document.cookie = curCookie
+                     }
+                     else if(confirm("Cookie exceeds 4KB and will be cut!"))
+                     {
+                     document.cookie = curCookie
+                     }
+                    }
+                    function getCookie(name) 
+                    {
+                     var prefix = name + "="
+                     var cookieStartIndex = document.cookie.indexOf(prefix)
+                     if (cookieStartIndex == -1)
+                     {
+                     return null
+                     }    
+                     var cookieEndIndex=document.cookie.indexOf(";",cookieStartIndex+prefix.length)
+                     if(cookieEndIndex == -1)
+                     {
+                     cookieEndIndex = document.cookie.length
+                     }
+                     return unescape(document.cookie.substring(cookieStartIndex+prefix.length,cookieEndIndex))
+                    }
+                    function deleteCookie(name, path, domain) 
+                    {
+                     if(getCookie(name)) 
+                     {
+                     document.cookie = name + "=" + 
+                     ((path) ? "; path=" + path : "") +
+                     ((domain) ? "; domain=" + domain : "") +
+                     "; expires=Thu, 01-Jan-70 00:00:01 GMT"
+                     }
+                    }
+                    function fixDate(date) 
+                    {
+                     var base=new Date(0)
+                     var skew=base.getTime()
+                     if(skew>0)
+                     {
+                     date.setTime(date.getTime()-skew)
+                     }    
+                    }
+                    var now=new Date()
+                    fixDate(now)
+                    now.setTime(now.getTime()+365 * 24 * 60 * 60 * 1000)
+                    var visits = getCookie("counter")
+                    if(!visits)
+                    {
+                     visits=1;
+                    }  
+                    else
+                    {
+                     visits=parseInt(visits)+1;
+                    }  
+                    setCookie("counter", visits, now)
+                    document.write("您是到访的第" + visits + "位用户！")
+                </script></span><span class="unit-remove"></span></h2>
+                <hr>
+            </div>
         </div>
         <div class="main">
             <div class="education info-unit right-list">
@@ -293,7 +362,9 @@
                 <button data-remodal-action="confirm" class="remodal-confirm">确定</button>
 </div></div>
 <!-- 页面点击小红心 -->
-<script> !function(e, t, a) { function r() { for (var e = 0; e < s.length; e++) s[e].alpha <= 0 ? (t.body.removeChild(s[e].el), s.splice(e, 1)) : (s[e].y--, s[e].scale += .004, s[e].alpha -= .013, s[e].el.style.cssText = "left:" + s[e].x + "px;top:" + s[e].y + "px;opacity:" + s[e].alpha + ";transform:scale(" + s[e].scale + "," + s[e].scale + ") rotate(45deg);background:" + s[e].color + ";z-index:99999"); requestAnimationFrame(r) } function n() { var t = "function" == typeof e.onclick && e.onclick; e.onclick = function(e) { t && t(), o(e) } } function o(e) { var a = t.createElement("div"); a.className = "heart", s.push({ el: a, x: e.clientX - 5, y: e.clientY - 5, scale: 1, alpha: 1, color: c() }), t.body.appendChild(a) } function i(e) { var a = t.createElement("style"); a.type = "text/css"; try { a.appendChild(t.createTextNode(e)) } catch(t) { a.styleSheet.cssText = e } t.getElementsByTagName("head")[0].appendChild(a) } function c() { return "rgb(" + ~~ (255 * Math.random()) + "," + ~~ (255 * Math.random()) + "," + ~~ (255 * Math.random()) + ")" } var s = []; e.requestAnimationFrame = e.requestAnimationFrame || e.webkitRequestAnimationFrame || e.mozRequestAnimationFrame || e.oRequestAnimationFrame || e.msRequestAnimationFrame || function(e) { setTimeout(e, 1e3 / 60) }, i(".heart{width: 10px;height: 10px;position: fixed;background: #f00;transform: rotate(45deg);-webkit-transform: rotate(45deg);-moz-transform: rotate(45deg);}.heart:after,.heart:before{content: '';width: inherit;height: inherit;background: inherit;border-radius: 50%;-webkit-border-radius: 50%;-moz-border-radius: 50%;position: fixed;}.heart:after{top: -5px;}.heart:before{left: -5px;}"), n(), r() } (window, document);</script>
+<script> 
+    !function(e, t, a) { function r() 
+        { for (var e = 0; e < s.length; e++) s[e].alpha <= 0 ? (t.body.removeChild(s[e].el), s.splice(e, 1)) : (s[e].y--, s[e].scale += .004, s[e].alpha -= .013, s[e].el.style.cssText = "left:" + s[e].x + "px;top:" + s[e].y + "px;opacity:" + s[e].alpha + ";transform:scale(" + s[e].scale + "," + s[e].scale + ") rotate(45deg);background:" + s[e].color + ";z-index:99999"); requestAnimationFrame(r) } function n() { var t = "function" == typeof e.onclick && e.onclick; e.onclick = function(e) { t && t(), o(e) } } function o(e) { var a = t.createElement("div"); a.className = "heart", s.push({ el: a, x: e.clientX - 5, y: e.clientY - 5, scale: 1, alpha: 1, color: c() }), t.body.appendChild(a) } function i(e) { var a = t.createElement("style"); a.type = "text/css"; try { a.appendChild(t.createTextNode(e)) } catch(t) { a.styleSheet.cssText = e } t.getElementsByTagName("head")[0].appendChild(a) } function c() { return "rgb(" + ~~ (255 * Math.random()) + "," + ~~ (255 * Math.random()) + "," + ~~ (255 * Math.random()) + ")" } var s = []; e.requestAnimationFrame = e.requestAnimationFrame || e.webkitRequestAnimationFrame || e.mozRequestAnimationFrame || e.oRequestAnimationFrame || e.msRequestAnimationFrame || function(e) { setTimeout(e, 1e3 / 60) }, i(".heart{width: 15px;height: 15px;position: fixed;background: #f00;transform: rotate(45deg);-webkit-transform: rotate(45deg);-moz-transform: rotate(45deg);}.heart:after,.heart:before{content: '';width: inherit;height: inherit;background: inherit;border-radius: 50%;-webkit-border-radius: 50%;-moz-border-radius: 50%;position: fixed;}.heart:after{top: -5px;}.heart:before{left: -5px;}"), n(), r() } (window, document);
+</script>
 </body>
-
 </html>
