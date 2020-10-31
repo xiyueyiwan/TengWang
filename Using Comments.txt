@@ -1,0 +1,19 @@
+Some Comment
+
+1. 修改模板长度：在style.css文件中的.container中。默认如下，是A4大小。
+
+.container {
+    position: relative;
+    margin: 0 auto;
+
+    width: 1050px;
+    height: 1550px;
+    background-color: white;
+
+}
+
+
+2. 修改个人照片位置：在style.css文件中的.portrait中。
+
+
+3. 使得网页不可编辑，修改 script.js 文件中的 jQuery。将('contenteditable', 'true')中的true全部改为false。
