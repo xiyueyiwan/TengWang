@@ -27,6 +27,7 @@
 .icon-favorite:before { content: "\eb4c"; }
 .icon-importcontacts:before { content: "\ebca"; }
 .icon-locallibrary:before { content: "\ec10"; }
+.icon-camera:before { content: "\eabe"; }
 
 span {
     display: inline-block;
