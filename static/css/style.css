@@ -24,6 +24,10 @@
 .icon-playlistadd:before { content: "\ecae"; }
 .icon-delete:before { content: "\e61b"; }
 .icon-trophy:before { content: "\e80b"; }
+.icon-favorite:before { content: "\eb4c"; }
+.icon-importcontacts:before { content: "\ebca"; }
+.icon-locallibrary:before { content: "\ec10"; }
+.icon-camera:before { content: "\eabe"; }
 
 span {
     display: inline-block;
@@ -65,7 +69,7 @@ h1, h2, h3, h4, h5 {
 .info-list, .progress-list{
     list-style: none;
     padding-left: 0px;
-    font-size: 16px;
+    font-size: 14px;
     line-height: 2;
 }
 
@@ -132,6 +136,7 @@ footer {
 
 p {
     line-height: 1.5;
+    font-size: 14px;
 }
 
 progress {
@@ -263,6 +268,7 @@ progress::-moz-progress-value {
 
 ul li{
     position: relative;
+    font-size: 14px;
 }
 
  .experience-list .item-remove {
@@ -272,7 +278,7 @@ ul li{
     margin-right: 2px;
     visibility: hidden;
     cursor: pointer;
-    
+    font-size: 14px;
 }
 
  .stack-list .item-remove {
